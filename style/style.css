@@ -572,6 +572,17 @@ button:focus-visible {
     display: none;
   }
 
+  /* O bloco de texto/botão do Hero tem rolagem interna própria no
+     desktop (rede de segurança para telas muito baixas). No mobile
+     isso fazia o toque sobre o título/subtítulo/botão ser capturado
+     por essa área em vez de rolar a página inteira — corrigido
+     removendo a rolagem interna e deixando o fluxo normal. */
+  .hero__content {
+    max-height: none;
+    overflow: visible;
+    overscroll-behavior: auto;
+  }
+
   /* Indicador "Role para explorar": visível apenas no desktop. */
   .scroll-cue {
     display: none;
@@ -866,6 +877,15 @@ button:focus-visible {
   color: var(--branco);
   margin: 0;
   text-wrap: balance;
+}
+
+.cultos__hint {
+  font-family: var(--fonte-corpo);
+  font-weight: 300;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: var(--texto-fraco);
+  margin: clamp(10px, 1.6vw, 14px) 0 0;
 }
 
 .cultos__carousel {

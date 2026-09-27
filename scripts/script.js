@@ -42,7 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // ---------------------------------------------------------
   const heroSection = document.getElementById("hero");
   const heroReveal = document.getElementById("heroReveal");
-  const suportaCursor = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const suportaCursor =
+    window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
+    window.innerWidth > 860 &&
+    !("ontouchstart" in window);
 
   if (heroSection && heroReveal && suportaCursor) {
     let alvoX = -1000;

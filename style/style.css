@@ -62,7 +62,7 @@ ul {
 .hero {
   position: relative;
   min-height: 100vh;
-  min-height: 100dvh;
+  min-height: 100svh;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -285,7 +285,7 @@ ul {
      bloco: a altura máxima nunca ultrapassa o espaço abaixo dele,
      e, no caso extremo de o texto ainda não caber, a rolagem interna
      garante que nada fique escondido atrás do header — nunca overlap. */
-  max-height: calc(100dvh - var(--header-espaco-seguro));
+  max-height: calc(100svh - var(--header-espaco-seguro));
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-width: none;

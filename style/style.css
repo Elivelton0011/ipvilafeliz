@@ -173,7 +173,7 @@ ul {
 }
 
 .brand__logo {
-  height: clamp(40px, 5vh, 56px);
+  height: clamp(65px, 5vh, 56px);
   width: auto;
   display: block;
   filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.45));
@@ -2026,7 +2026,7 @@ button:focus-visible {
 }
 
 .footer__logo {
-  height: clamp(44px, 5vh, 60px);
+  height: clamp(80px, 5vh, 60px);
   width: auto;
   display: block;
 }

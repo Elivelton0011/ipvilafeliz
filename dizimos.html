@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Dízimos e Ofertas — Igreja Presbiteriana de Vila Feliz</title>
+  <meta name="description" content="Contribua com a Igreja Presbiteriana de Vila Feliz por meio de dízimos e ofertas. Contribuir também é uma forma de adorar a Deus." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="style/dizimos.css" />
+</head>
+<body>
+
+  <header class="hero__header">
+    <a href="index.html" class="brand">
+      <img src="assets/images/logo-ipvf.png" alt="Igreja Presbiteriana de Vila Feliz" class="brand__logo" />
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" id="primaryNav" aria-label="Navegação principal">
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link">Início</a></li>
+        <li><a href="index.html#quem-somos" class="nav__link">Quem Somos</a></li>
+        <li><a href="index.html#cultos" class="nav__link">Cultos</a></li>
+        <li><a href="index.html#ministerios" class="nav__link">Ministérios</a></li>
+        <li><a href="index.html#lideranca" class="nav__link">Liderança</a></li>
+        <li><a href="index.html#redes" class="nav__link">Redes</a></li>
+        <li><a href="index.html#contato" class="nav__link">Contato</a></li>
+        <li><a href="dizimos.html" class="footer__link">Dízimos e Ofertas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="doacao-topo">
+      <div class="doacao-topo__inner">
+        <p class="doacao-topo__eyebrow">Igreja Presbiteriana de Vila Feliz</p>
+        <h1 class="doacao-topo__title">Dízimos e <em>Ofertas</em></h1>
+        <p class="doacao-topo__subtitle">Contribuir também é uma forma de adorar a Deus.</p>
+      </div>
+    </section>
+
+    <section class="doacao">
+      <div class="doacao__grid">
+        <div class="doacao__texto">
+          <p class="doacao__eyebrow">Gratidão e fidelidade</p>
+          <h2 class="doacao__title">Contribuímos porque já fomos alcançados pela graça</h2>
+
+          <p class="doacao__body">
+            Na Igreja Presbiteriana em Vila Feliz, entendemos os dízimos e as
+            ofertas como expressão de gratidão, fidelidade e mordomia cristã.
+            Tudo o que temos pertence ao Senhor, e contribuímos não para
+            comprar bênçãos, mas porque já fomos abundantemente alcançados
+            pela graça de Deus.
+          </p>
+
+          <blockquote class="doacao__verso">
+            <p>
+              “Cada um contribua segundo tiver proposto no coração, não com
+              tristeza ou por necessidade; porque Deus ama a quem dá com
+              alegria.”
+            </p>
+            <cite>2 Coríntios 9.7</cite>
+          </blockquote>
+
+          <p class="doacao__body">
+            Por meio dos dízimos e ofertas, a igreja pode continuar cumprindo
+            sua missão: pregar fielmente a Palavra de Deus, anunciar o
+            Evangelho, discipular pessoas, cuidar das famílias, desenvolver
+            ações de misericórdia e alcançar nossa comunidade com a esperança
+            que há em Cristo.
+          </p>
+
+          <p class="doacao__destaque">
+            Cada contribuição participa daquilo que Deus está realizando entre nós.
+          </p>
+        </div>
+
+        <aside class="doacao__card" aria-labelledby="como-contribuir">
+          <h2 class="doacao__card-title" id="como-contribuir">Como contribuir</h2>
+
+          <div class="doacao__qr-wrap">
+            <img
+              src="assets/images/dizimos e ofertas.jpeg"
+              alt="QR Code PIX para dízimos e ofertas da Igreja Presbiteriana de Vila Feliz"
+              class="doacao__qr"
+              width="320"
+              height="320"
+              loading="lazy"
+            />
+          </div>
+
+          <p class="doacao__qr-hint">Aponte a câmera do app do seu banco para o QR Code</p>
+
+          <dl class="doacao__dados">
+            <div class="doacao__dado doacao__dado--pix">
+              <dt>PIX (chave e-mail)</dt>
+              <dd>
+                <span id="chavePix">ipbvilafeliz@gmail.com</span>
+                <button type="button" class="doacao__copiar" id="copiarPix" aria-label="Copiar chave PIX">Copiar</button>
+              </dd>
+            </div>
+            <div class="doacao__dado">
+              <dt>Banco</dt>
+              <dd>Sicredi</dd>
+            </div>
+            <div class="doacao__dado">
+              <dt>Agência</dt>
+              <dd>2201</dd>
+            </div>
+            <div class="doacao__dado">
+              <dt>Conta corrente</dt>
+              <dd>37729-3</dd>
+            </div>
+            <div class="doacao__dado">
+              <dt>Favorecido</dt>
+              <dd>Igreja Presbiteriana de Intermares</dd>
+            </div>
+          </dl>
+
+          <p class="doacao__copiado" id="copiadoMsg" role="status" aria-live="polite"></p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="doacao-motivacao">
+      <div class="doacao-motivacao__inner">
+        <p class="doacao-motivacao__eyebrow">Nossa motivação</p>
+        <p class="doacao-motivacao__texto">
+          Contribuímos com alegria, responsabilidade e gratidão, reconhecendo
+          que somos apenas administradores daquilo que o Senhor colocou em
+          nossas mãos. Nossa oração é que cada recurso recebido seja utilizado
+          com zelo, transparência e fidelidade à missão da Igreja de Cristo.
+        </p>
+        <p class="doacao-motivacao__assinatura">
+          Igreja Presbiteriana em Vila Feliz<br />
+          <em>Um lar de Palavra fiel e esperança em Cristo.</em>
+        </p>
+        <a href="index.html" class="btn-cta doacao-motivacao__voltar">
+          <span class="btn-cta__label">Voltar ao site</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo-link">
+          <img
+            src="assets/images/logo-ipvf.png"
+            alt="Igreja Presbiteriana de Vila Feliz"
+            class="footer__logo"
+          />
+        </a>
+        <p class="footer__tagline">Uma família reunida em Cristo.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Navegação do rodapé">
+        <h3 class="footer__col-title">Navegação</h3>
+        <ul class="footer__nav-list">
+          <li><a href="index.html" class="footer__link">Início</a></li>
+          <li><a href="index.html#cultos" class="footer__link">Horário</a></li>
+          <li><a href="index.html#quem-somos" class="footer__link">Sobre</a></li>
+          <li><a href="index.html#ministerios" class="footer__link">Ministérios</a></li>
+          <li><a href="index.html#lideranca" class="footer__link">Liderança</a></li>
+          <li><a href="index.html#redes" class="footer__link">Redes</a></li>
+          <li><a href="index.html#contato" class="footer__link">Contatos</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__social">
+        <h3 class="footer__col-title">Redes sociais</h3>
+        <ul class="footer__social-list">
+          <li>
+            <a
+              href="https://www.instagram.com/ipvilafeliz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__social-link"
+              aria-label="Instagram da Igreja Presbiteriana de Vila Feliz"
+            >
+              <span class="footer__social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6" />
+                  <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6" />
+                  <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" />
+                </svg>
+              </span>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://wa.me/5583998012249"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__social-link"
+              aria-label="WhatsApp da Igreja Presbiteriana de Vila Feliz"
+            >
+              <span class="footer__social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.2 17.6 4.5 21l3.5-1.6a8.6 8.6 0 1 0-1.8-1.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+                  <path d="M9.2 10.1c.2 2.7 2.3 4.8 5 5 .9.1 1-.3 1.1-.7l.2-1c0-.2 0-.5-.3-.6l-1.7-.6c-.2 0-.4 0-.5.2l-.4.6c-1-.5-1.8-1.3-2.3-2.3l.6-.4c.2-.1.2-.3.2-.5l-.6-1.7c-.1-.3-.3-.3-.6-.3l-1 .2c-.4.1-.8.2-.7 1.1Z" fill="currentColor" />
+                </svg>
+              </span>
+              <span>WhatsApp</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/@ipbvilafelizvila"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer__social-link"
+              aria-label="YouTube da Igreja Presbiteriana de Vila Feliz"
+            >
+              <span class="footer__social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2.5" y="6" width="19" height="12" rx="4" stroke="currentColor" stroke-width="1.6" />
+                  <path d="M10.3 9.6v4.8l4.3-2.4-4.3-2.4Z" fill="currentColor" />
+                </svg>
+              </span>
+              <span>YouTube</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__divider" role="separator"></div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">2026 © Igreja Presbiteriana em Vila Feliz - Todos os direitos reservados.</p>
+      <p class="footer__credit">
+        Desenvolvido por
+        <a
+          href="https://www.linkedin.com/in/eliveltonchaves/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer__credit-link"
+        >Elivelton Chaves</a>
+      </p>
+      <a href="#" class="footer__top">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+  <script>
+    // Copiar a chave PIX com um toque.
+    (function () {
+      var botao = document.getElementById("copiarPix");
+      var chave = document.getElementById("chavePix");
+      var msg = document.getElementById("copiadoMsg");
+      if (!botao || !chave) return;
+
+      botao.addEventListener("click", function () {
+        var texto = chave.textContent.trim();
+
+        function avisar(ok) {
+          msg.textContent = ok ? "Chave PIX copiada!" : "Não foi possível copiar. Selecione e copie manualmente.";
+          setTimeout(function () { msg.textContent = ""; }, 3000);
+        }
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(texto).then(function () { avisar(true); }, function () { avisar(false); });
+        } else {
+          var area = document.createElement("textarea");
+          area.value = texto;
+          document.body.appendChild(area);
+          area.select();
+          var ok = false;
+          try { ok = document.execCommand("copy"); } catch (e) {}
+          document.body.removeChild(area);
+          avisar(ok);
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

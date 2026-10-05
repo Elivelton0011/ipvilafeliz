@@ -344,7 +344,11 @@ ul {
 
 .hero__actions {
   display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
+
+
 
 .btn-cta {
   position: relative;
@@ -411,6 +415,20 @@ ul {
     opacity: 0;
     transform: scale(1.18);
   }
+}
+
+/* Botão secundário do Hero (contorno): mesmo formato e animação de
+   preenchimento do botão principal, mas vazado. */
+.btn-cta--secundario {
+  color: var(--branco);
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  box-shadow: none;
+}
+
+.btn-cta--secundario:hover,
+.btn-cta--secundario:focus-visible {
+  border-color: var(--destaque);
 }
 
 /* -----------------------------------------

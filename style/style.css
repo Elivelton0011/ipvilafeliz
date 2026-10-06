@@ -621,7 +621,7 @@ button:focus-visible {
     overscroll-behavior: auto;
   }
 
-  /* Indicador "Role para explorar": visível apenas no desktop. */
+  /* Indicador "Role para explorar": visível apenas nos desktops. */
   .scroll-cue {
     display: none;
   }

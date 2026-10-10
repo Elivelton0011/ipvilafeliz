@@ -73,7 +73,6 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-top: var(--header-espaco-seguro);
   /* Reserva o espaço do header: se o conteúdo for maior que a tela
      (celular deitado), o Hero cresce em vez de o texto subir sobre a logo. */
   padding-top: var(--header-espaco-seguro);
@@ -347,8 +346,6 @@ ul {
   flex-wrap: wrap;
   gap: 16px;
 }
-
-
 
 .btn-cta {
   position: relative;
@@ -885,6 +882,8 @@ button:focus-visible {
 
 /* =========================================================
    Seção "Cultos" — carrossel 3D infinito
+   O texto de cada culto aparece automaticamente no cartão
+   central (classe .is-focused, definida pelo JavaScript).
    ========================================================= */
 
 .cultos {
@@ -993,6 +992,7 @@ button:focus-visible {
   display: block;
 }
 
+/* Cartões laterais: só o título aparece, com um degradê leve. */
 .cultos__card-scrim {
   position: absolute;
   inset: 0;
@@ -1000,7 +1000,7 @@ button:focus-visible {
   transition: background 0.45s ease;
 }
 
-.cultos__card.is-hover .cultos__card-scrim,
+/* Cartão central: degradê mais escuro para o texto ficar legível. */
 .cultos__card.is-focused .cultos__card-scrim {
   background: linear-gradient(180deg, rgba(2, 12, 24, 0.2) 0%, rgba(2, 12, 24, 0.94) 58%, rgba(2, 12, 24, 0.97) 100%);
 }
@@ -1023,18 +1023,18 @@ button:focus-visible {
   transition: margin var(--transicao-padrao);
 }
 
-.cultos__card.is-hover .cultos__card-title,
 .cultos__card.is-focused .cultos__card-title {
   margin-bottom: 2px;
 }
 
+/* Detalhes (horários + descrição): escondidos nos cartões laterais. */
 .cultos__card-details {
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.45s ease, transform 0.45s ease;
 }
 
-.cultos__card.is-hover .cultos__card-details,
+/* ...e visíveis no cartão central. */
 .cultos__card.is-focused .cultos__card-details {
   opacity: 1;
   transform: translateY(0);

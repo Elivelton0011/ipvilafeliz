@@ -204,6 +204,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const offsetAbs = Math.abs(offset);
         const emHover = cartao.classList.contains("is-hover");
 
+        const ativo = indice === cultoAtivo;
+        cartao.classList.toggle("is-focused", ativo);
+        cartao.setAttribute("aria-pressed", String(ativo));
+
         const x = offset * espaco + arrastoXCultos;
         let rotacaoY = prefereMovimentoReduzidoCultos ? 0 : -offset * angulo;
         let escala = Math.max(1 - offsetAbs * passoEscala, 0.5);

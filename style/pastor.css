@@ -1,0 +1,406 @@
+/* =========================================================
+   Página "Rev. Carlos Rodrigo"
+   Usa as variáveis e componentes do style.css (carregue-o antes).
+   Salvar como: style/pastor.css
+   ========================================================= */
+
+/* ---------- Topo ---------- */
+.pastor-topo {
+  background:
+    radial-gradient(ellipse at 20% 0%, rgba(113, 169, 219, 0.22) 0%, rgba(113, 169, 219, 0) 60%),
+    var(--contradestaque);
+  padding: calc(var(--header-espaco-seguro) + clamp(40px, 7vw, 90px)) var(--margem-lateral) clamp(56px, 8vw, 100px);
+  overflow: hidden;
+}
+
+.pastor-topo__grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(32px, 6vw, 72px);
+  align-items: center;
+}
+
+.pastor-topo__eyebrow {
+  font-family: var(--fonte-corpo);
+  font-size: clamp(0.8rem, 1.4vw, 0.9rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--destaque);
+  margin: 0 0 clamp(12px, 2vw, 18px);
+}
+
+.pastor-topo__title {
+  font-family: var(--fonte-titulo);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  line-height: 1.05;
+  color: var(--branco);
+  margin: 0 0 clamp(14px, 2.4vw, 22px);
+  text-wrap: balance;
+}
+
+.pastor-topo__title em { font-style: italic; color: var(--destaque); }
+
+.pastor-topo__role {
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--texto-suave);
+  margin: 0 0 clamp(18px, 3vw, 26px);
+}
+
+.pastor-topo__resumo {
+  font-family: var(--fonte-corpo);
+  font-weight: 300;
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  line-height: 1.75;
+  color: var(--texto-suave);
+  max-width: 58ch;
+  margin: 0 0 clamp(24px, 3.4vw, 34px);
+}
+
+.pastor-topo__acoes { display: flex; flex-wrap: wrap; gap: 14px; }
+
+.pastor-topo__foto {
+  margin: 0;
+  border-radius: clamp(18px, 2.2vw, 26px);
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(113, 169, 219, 0.35);
+  aspect-ratio: 3 / 4;
+}
+
+.pastor-topo__foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+/* ---------- Seções claras ---------- */
+.pastor-secao {
+  background: var(--fundo-claro);
+  padding: clamp(56px, 9vw, 110px) 0;
+  overflow-x: hidden;
+}
+
+.pastor-secao--branca { background: #ffffff; }
+
+.pastor-secao__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 var(--margem-lateral);
+}
+
+.pastor-secao__eyebrow {
+  font-family: var(--fonte-corpo);
+  font-size: clamp(0.8rem, 1.4vw, 0.9rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--destaque);
+  margin: 0 0 clamp(10px, 2vw, 16px);
+}
+
+.pastor-secao__title {
+  font-family: var(--fonte-titulo);
+  font-weight: 500;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  line-height: 1.15;
+  color: var(--contradestaque);
+  margin: 0 0 clamp(24px, 3.6vw, 40px);
+  text-wrap: balance;
+}
+
+/* ---------- Dados pessoais ---------- */
+.pastor-dados {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 2vw, 20px);
+  margin: 0;
+}
+
+.pastor-dados__item {
+  background: #ffffff;
+  border: 1px solid rgba(2, 44, 82, 0.1);
+  border-radius: clamp(14px, 1.8vw, 20px);
+  padding: clamp(16px, 2.2vw, 24px);
+  box-shadow: 0 16px 36px rgba(2, 44, 82, 0.06);
+}
+
+.pastor-dados__item dt {
+  font-family: var(--fonte-corpo);
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--destaque);
+  margin: 0 0 6px;
+}
+
+.pastor-dados__item dd {
+  margin: 0;
+  font-family: var(--fonte-corpo);
+  font-size: 0.98rem;
+  line-height: 1.45;
+  color: var(--contradestaque);
+}
+
+/* ---------- Linha do tempo ---------- */
+.pastor-linha {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 clamp(20px, 3vw, 32px);
+  border-left: 2px solid rgba(113, 169, 219, 0.45);
+  display: grid;
+  gap: clamp(20px, 3vw, 30px);
+}
+
+.pastor-linha__item { position: relative; }
+
+.pastor-linha__item::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * clamp(20px, 3vw, 32px) - 7px);
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--destaque);
+  box-shadow: 0 0 0 4px var(--fundo-claro);
+}
+
+.pastor-secao--branca .pastor-linha__item::before { box-shadow: 0 0 0 4px #ffffff; }
+
+.pastor-linha__periodo {
+  font-family: var(--fonte-corpo);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--destaque);
+  margin: 0 0 4px;
+}
+
+.pastor-linha__cargo {
+  font-family: var(--fonte-titulo);
+  font-weight: 500;
+  font-size: clamp(1.3rem, 2.2vw, 1.65rem);
+  line-height: 1.2;
+  color: var(--contradestaque);
+  margin: 0;
+}
+
+.pastor-linha__local {
+  font-family: var(--fonte-corpo);
+  font-weight: 400;
+  font-size: 0.92rem;
+  color: var(--texto-corpo-escuro);
+  margin: 2px 0 10px;
+}
+
+.pastor-linha__lista {
+  margin: 0;
+  padding-left: 1.1em;
+  font-family: var(--fonte-corpo);
+  font-weight: 300;
+  font-size: clamp(0.92rem, 1.3vw, 1rem);
+  line-height: 1.7;
+  color: var(--texto-corpo-escuro);
+  max-width: 72ch;
+}
+
+.pastor-linha__lista li + li { margin-top: 4px; }
+
+/* ---------- Galeria ---------- */
+.pastor-galeria {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(12px, 2vw, 22px);
+  margin: 0;
+}
+
+.pastor-galeria__item {
+  margin: 0;
+  border-radius: clamp(14px, 1.8vw, 20px);
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  box-shadow: 0 20px 48px rgba(2, 44, 82, 0.14);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+}
+
+.pastor-galeria__item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 64px rgba(2, 44, 82, 0.2);
+}
+
+.pastor-galeria__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pastor-galeria__item:nth-child(3) img { object-position: 50% 62%; }
+
+/* ---------- Formação / cursos ---------- */
+.pastor-duas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 3.4vw, 40px);
+}
+
+.pastor-card {
+  background: #ffffff;
+  border: 1px solid rgba(2, 44, 82, 0.1);
+  border-radius: clamp(18px, 2.2vw, 26px);
+  box-shadow: 0 24px 60px rgba(2, 44, 82, 0.1);
+  padding: clamp(22px, 3.2vw, 36px);
+}
+
+.pastor-card__title {
+  font-family: var(--fonte-titulo);
+  font-weight: 500;
+  font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+  color: var(--contradestaque);
+  margin: 0 0 clamp(14px, 2vw, 20px);
+}
+
+.pastor-card__lista { list-style: none; margin: 0; padding: 0; }
+
+.pastor-card__lista li {
+  padding: 12px 0;
+  border-top: 1px solid rgba(2, 44, 82, 0.08);
+  font-family: var(--fonte-corpo);
+  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--texto-corpo-escuro);
+}
+
+.pastor-card__lista li:first-child { border-top: none; padding-top: 0; }
+
+.pastor-card__lista strong { display: block; font-weight: 500; color: var(--contradestaque); }
+
+.pastor-card__lista small {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--destaque);
+  font-weight: 500;
+}
+
+/* ---------- Áreas e competências ---------- */
+.pastor-tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+
+.pastor-tags li {
+  font-family: var(--fonte-corpo);
+  font-size: 0.9rem;
+  color: var(--contradestaque);
+  background: #ffffff;
+  border: 1px solid rgba(113, 169, 219, 0.5);
+  border-radius: 999px;
+  padding: 9px 16px;
+}
+
+.pastor-tags--solido li { background: var(--contradestaque); color: #ffffff; border-color: var(--contradestaque); }
+
+.pastor-subtitulo {
+  font-family: var(--fonte-titulo);
+  font-weight: 500;
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+  color: var(--contradestaque);
+  margin: clamp(32px, 4.4vw, 48px) 0 16px;
+}
+
+/* ---------- Informações + contato ---------- */
+.pastor-fim {
+  background: var(--contradestaque);
+  padding: clamp(64px, 10vw, 120px) var(--margem-lateral);
+}
+
+.pastor-fim__inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(32px, 6vw, 72px);
+  align-items: start;
+}
+
+.pastor-fim__eyebrow {
+  font-family: var(--fonte-corpo);
+  font-size: clamp(0.8rem, 1.4vw, 0.9rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--destaque);
+  margin: 0 0 clamp(14px, 2vw, 20px);
+}
+
+.pastor-fim__lista {
+  margin: 0 0 clamp(24px, 3vw, 32px);
+  padding-left: 1.1em;
+  font-family: var(--fonte-corpo);
+  font-weight: 300;
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  line-height: 1.75;
+  color: var(--texto-suave);
+}
+
+.pastor-fim__lista li + li { margin-top: 8px; }
+
+.pastor-fim__card {
+  border: 1px solid rgba(113, 169, 219, 0.35);
+  border-radius: clamp(18px, 2.2vw, 26px);
+  padding: clamp(22px, 3.2vw, 34px);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.pastor-fim__card h2 {
+  font-family: var(--fonte-titulo);
+  font-weight: 500;
+  font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+  color: var(--branco);
+  margin: 0 0 16px;
+}
+
+.pastor-fim__card p {
+  margin: 0 0 10px;
+  font-family: var(--fonte-corpo);
+  font-weight: 300;
+  color: var(--texto-suave);
+  overflow-wrap: anywhere;
+}
+
+.pastor-fim__card a { color: var(--destaque); text-decoration: none; }
+.pastor-fim__card a:hover,
+.pastor-fim__card a:focus-visible { text-decoration: underline; }
+
+.pastor-fim__acoes { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 22px; }
+
+/* ---------- Responsivo / acessibilidade ---------- */
+@media (max-width: 900px) {
+  .pastor-topo__grid,
+  .pastor-fim__inner,
+  .pastor-duas { grid-template-columns: 1fr; }
+
+  .pastor-topo__foto { max-width: 420px; aspect-ratio: 4 / 5; }
+  .pastor-dados { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .pastor-galeria { grid-template-columns: 1fr; }
+  .pastor-galeria__item { aspect-ratio: 4 / 5; }
+}
+
+@media (max-width: 420px) {
+  .pastor-dados { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pastor-galeria__item { transition: none; }
+  .pastor-galeria__item:hover { transform: none; }
+}
